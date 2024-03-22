@@ -1,0 +1,458 @@
+/********** Template CSS **********/
+:root {
+    --primary: #fc0;
+    --secondary: #525368;
+    --light: #E8F5E9;
+    --dark: #0F4229;
+}
+
+
+
+h1,
+.h1,
+h2,
+.h2,
+.fw-bold {
+    font-weight: 700 !important;
+    margin-bottom: 0;
+}
+
+h3,
+.h3,
+h4,
+.h4,
+.fw-medium {
+    font-weight: 600 !important;
+    margin-bottom: 0;
+}
+
+h5,
+.h5,
+h6,
+.h6,
+.fw-semi-bold {
+    font-weight: 500 !important;
+    margin-bottom: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+p {
+    margin-bottom: 0;
+}
+
+a {
+    color: #000;
+}
+
+/*** Button ***/
+.btn {
+    transition: .5s;
+    font-weight: 500;
+}
+
+.bg-black {
+    background: #000;
+}
+
+.back-to-top {
+    position: fixed;
+    display: none;
+    right: 15px;
+    bottom: 15px;
+    z-index: 99;
+    border: none;
+    background: #fc0;
+    color: #000;
+}
+
+.back-to-top:hover {
+    background: #fc0;
+}
+
+/*** Navbar ***/
+.navbar.sticky-top {
+    top: -100px;
+    transition: .5s;
+}
+
+.navbar .navbar-brand,
+.navbar a.btn {
+    height: 80px
+}
+
+.navbar .navbar-nav .nav-link {
+    margin-right: 35px;
+    padding: 25px 0;
+    color: var(--dark);
+    font-size: 18px;
+    font-weight: 500;
+    outline: none;
+}
+
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link.active {
+    color: var(--primary);
+}
+
+.navbar .dropdown-toggle::after {
+    border: none;
+    content: "\f107";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    vertical-align: middle;
+    margin-left: 8px;
+}
+
+@media (max-width: 991.98px) {
+    .navbar .navbar-nav .nav-link  {
+        margin-right: 0;
+        padding: 10px 0;
+    }
+
+    .navbar .navbar-nav {
+        border-top: 1px solid #EEEEEE;
+    }
+}
+
+@media (min-width: 992px) {
+    .navbar .nav-item .dropdown-menu {
+        display: block;
+        border: none;
+        margin-top: 0;
+        top: 150%;
+        opacity: 0;
+        visibility: hidden;
+        transition: .5s;
+        left: auto;
+        box-shadow: 0 5px 25px rgba(0, 0, 0, 0.05);
+        background: #fff !important;
+    }
+
+    .navbar .nav-item:hover .dropdown-menu {
+        top: 100%;
+        visibility: visible;
+        transition: .5s;
+        opacity: 1;
+    }
+}
+
+.hero-wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2rem 20px;
+    width: 100%;
+    max-width: 100%;
+}
+
+.hero-wrapper .hero-title {
+    max-width: 100%;
+    position: relative;
+    padding-bottom: 4rem;
+}
+
+.hero-wrapper .hero-title h1 {
+    font-size: 2.625rem;
+    color: #fff;
+}
+.hero-wrapper .hero-title p {
+    color: #fff;
+}
+
+.hero-wrapper .hero-video {
+    position: relative;
+    padding-left: 10px;
+    padding-right: 10px;
+    flex: 0 0 83.3333%;
+}
+
+.hero-wrapper .hero-video .em-video {
+    position: relative;
+    width: 100%;
+    padding-bottom: 216.667%;
+    height: 0px;
+    overflow: hidden;
+    background-size: cover;
+    transition: transform 1.5s ease 0.25s, opacity 1s ease 0.25s;
+    transform: translateY(0px);
+    opacity: 1;
+    border-radius: 13% / 6%;
+    box-shadow: rgb(26, 26, 26) 0px 0px 0px 8px;
+    background-color: rgb(26, 26, 26);
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.hero-wrapper .hero-video .rys-video {
+    max-width: 83.3333%;
+    position: relative;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 8.33333%;
+    margin-top: 0rem;
+    min-width: 0px;
+}
+
+.hero-wrapper .hero-video .video-wrapper {
+    position: relative;
+    display: flex;
+    height: 100%;
+    -moz-box-pack: center;
+    justify-content: center;
+    -moz-box-align: center;
+    align-items: center;
+}
+
+.bg-white-top {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 100%;
+    max-width: 100%;
+    background-color: rgb(255, 255, 255);
+    height: 45vw;
+    margin-top: -44vw;
+}
+
+.article-card {
+    border: 0;
+    border-radius: 0;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.05);
+}
+
+
+.core-article .article-card.first-articles {
+    transition: .5s ease-out;
+}
+
+.core-article .article-card.first-articles:hover {
+    background: #f7f7f7;
+}
+
+.entry .entry-date {
+    position: absolute;
+    bottom: -10px;
+    left: 10px;
+    display: block;
+    color: #000;
+    background: #fc0;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.entry .entry-date h5 {
+    color: #000;
+}
+
+.entry .entry-category {
+    width: 100%;
+    display: flex;
+}
+
+.entry .entry-category a {
+    padding: 0 10px;
+    background: rgba(19, 19, 19, 0.05);
+    margin: 5px;
+    transition: .5s ease;
+    font-size: 14px;
+}
+
+.entry .entry-category a:hover {
+    background: #ffcc00d4;
+    color: #000;
+}
+
+.entry .entry-title a{
+    color: #000;
+    display: inline;
+    text-decoration: none;
+    background-image: linear-gradient(#fc0, #fc0);
+    background-position: 0% 80%;
+    background-repeat: no-repeat;
+    background-size: 0% 8px;
+    transition: background-size 0.3s;
+}
+.entry .entry-title a:hover{
+    background-size: 100% 8px;
+}
+
+.entry .read a {
+    color: #000;
+    display: inline;
+    text-decoration: none;
+    background-image: linear-gradient(#fc0, #fc0);
+    background-position: 0% 110%;
+    background-repeat: no-repeat;
+    background-size: 100% 3px;
+    transition: 0.3s;
+}
+.entry .read a:hover {
+    color: #000;
+    background-size: 100% 100%;
+}
+
+.second-articles .articles .entry .entry-date {
+    line-height: 14px;
+}
+
+.second-articles .articles .entry .entry-date h5 {
+    font-size: 16px;
+}
+
+.second-articles .articles .entry .entry-date p {
+    font-size: 13px;
+}
+
+.core-article .article-card.second-articles {
+    transition: .5s ease-out;
+}
+
+.core-article .article-card.second-articles:hover {
+    background: #f7f7f7;
+}
+
+
+
+.blog-pagination {
+    margin-top: 80px;
+}
+
+.blog-pagination .page-item {
+    margin: 0 5px;
+}
+
+.blog-pagination .page-item .page-link {
+    color: #8a8a8a;
+    border: 1px solid #f0e9ff;
+}
+
+.blog-pagination .page-item .page-link:hover {
+    background: #fc0;
+    color: #000;
+}
+
+
+
+/* Side Articles */
+.side-articles .top-article {
+    border-bottom: 1px dashed #b9b9b9;
+}
+
+.side-articles .top-article .entry .entry-date {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    color: rgb(106, 106, 106);
+    background: transparent;
+    text-align: start;
+    display: block;
+    padding: 0;
+    font-size: 12px;
+}
+
+.side-articles .top-article .entry .entry-desk p {
+    font-size: 16px;
+    line-height: 18px;
+}
+
+.side-articles .second-articles .media {
+    transition: .5s ease-out;
+}
+
+.side-articles .second-articles .media:hover {
+    background: #f7f7f7;
+}
+
+
+
+.side-articles .second-articles .media:not(:last-child) {
+    border-bottom: 1px dashed #b9b9b9;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+}
+
+.side-articles .second-articles .media img {
+    height: 80px;
+    width: 80px !important;
+    -o-object-fit: cover;
+    object-fit: cover;
+    border-radius: 0;
+}
+
+.side-articles .second-articles .media .content .entry-date {
+    font-size: 12px;
+    color: rgb(106, 106, 106);
+}
+
+.side-articles .second-articles .media .content .entry-title p {
+    font-size: 0.9rem;
+    color: #000;
+    line-height: 16px;
+}
+
+.side-articles .second-articles .media .content .entry-desk p {
+    font-size: 0.8rem;
+    color: #525368;
+    line-height: 16px;
+}
+
+/*** Categories ***/
+.categories .categorie-list a {
+    padding: 5px 10px;
+    background: rgba(19, 19, 19, 0.05);
+    margin-bottom: 9px;
+    margin-right: 9px;
+    transition: .5s ease;
+    font-size: 16px;
+    display: inline-block;
+}
+
+.categories .categorie-list a:hover {
+    background: #ffcc00d4;
+    color: #000;
+}
+
+
+
+/*** Footer ***/
+.footer {
+    background: #131313 ;
+}
+
+.footer .logo {
+    font-size: 3rem;
+    color: #fff;
+}
+.footer .navbar-footer {
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.footer .navbar-footer li {
+    margin: 10px 10px;
+}
+
+.footer .navbar-footer a {
+    color: #fff;
+}
+
+.footer .navbar-footer a:hover {
+    color: var(--primary);
+}
+
+.copyright {
+    color: var(--light);
+    background: #0e0e0e ;
+}
+
+.copyright a {
+    color: #FFFFFF;
+}
+
+.copyright a:hover {
+    color: var(--primary);
+}
